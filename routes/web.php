@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/user', function () {
-    return view('user');
-});
+// Route::get('/user', function () {
+//     return view('user');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('user','Crud\UserController@index');
+Route::post('save','Crud\UserController@store');
