@@ -16,4 +16,12 @@ class UserController extends Controller
         $result = User::store($data);
         return view('user');
     }
+    public function show(){
+        try{
+            $results = User::show();
+            return view('user_show', compact('results'));
+        }catch(\Exception $e){
+
+        }
+    }
 }
