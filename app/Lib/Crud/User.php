@@ -20,4 +20,16 @@ class User{
             Log::error($e);
         }
     }
+    public static function delete($id):bool{
+        try{
+            $result = Model::find($id)->delete();
+            if($result){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(\Exception $e){
+            Log::error($e);
+        }
+    }
 }

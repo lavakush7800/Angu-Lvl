@@ -36,7 +36,7 @@
     </tbody>
     <td></td>
     <td>
-        <a href="/registration">
+        <a href="/user">
         <button class="btn btn-primary btn-md ">Add User</button>
         </a>
         </td>
